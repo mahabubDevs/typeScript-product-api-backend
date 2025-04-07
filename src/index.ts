@@ -2,11 +2,12 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import productRoutes from './routes/product.routes';
-import cartRoutes from './routes/cart.routes';
-import wishlistRoutes from './routes/wishlist.routes';
-import orderRoutes from './routes/order.routes';
-import adminRoutes from './routes/admin.routes';
+
+import productRoutes from './routes/product.routes'; // Product routes
+import cartRoutes from './routes/cart.routes'; // Cart routes
+import wishlistRoutes from './routes/wishlist.routes'; // Wishlist routes
+import orderRoutes from './routes/order.routes'; // Order routes
+
 // Optional: import authRoutes when you implement auth
 // import authRoutes from './routes/auth.routes';
 
@@ -24,7 +25,6 @@ app.use('/api/products', productRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/wishlist', wishlistRoutes);
 app.use('/api/orders', orderRoutes);
-app.use('/api/admin', adminRoutes);
 // app.use('/api/auth', authRoutes); // future
 
 // Root route
